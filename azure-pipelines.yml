@@ -16,6 +16,8 @@ steps:
 -  task: DotNetCoreCLI@1
    displayName: BuildIt!
   
+- script: dir
+  displayName: Show me what's here
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
