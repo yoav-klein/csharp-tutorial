@@ -15,8 +15,9 @@ steps:
   displayName: 'Run a one-line script'
 -  task: DotNetCoreCLI@2
    displayName: BuildIt!
+- powershell: |
+   echo PowerShell script
   
-- task: PowerShell@2
   displayName: Show me what's here
 - script: |
     echo Add other tasks to build, test, and deploy your project.
