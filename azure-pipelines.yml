@@ -16,7 +16,7 @@ steps:
 -  task: DotNetCoreCLI@2
    displayName: BuildIt!
   
-- script: dir
+- task: PowerShell@2
   displayName: Show me what's here
 - script: |
     echo Add other tasks to build, test, and deploy your project.
