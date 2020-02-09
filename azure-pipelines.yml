@@ -24,8 +24,8 @@ steps:
    echo $(Build.BuildNumber) > version.txt
   displayName: Update Version
 - powershell: |
-    git config --user.email "yoavklein25@gmail.com"
-    git config --user.name "yoav-klein"
+    git config --global user.email "yoavklein25@gmail.com"
+    git config --global user.name "yoav-klein"
     git add .
     git commit -m "Build number $(Build.BuildNumber)"
     git push https://625a87a4570f58a6605f2033f1cd0f15ff1c143f@github.com/yoav-klein/csharp-tutorial.git
