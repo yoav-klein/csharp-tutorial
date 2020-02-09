@@ -10,16 +10,20 @@ pool:
   vmImage: 'vs2017-win2016'
 
 steps:
-- script: echo Hello, world!
-- script: echo Again, Hello!
-  displayName: 'Run a one-line script'
+
 -  task: DotNetCoreCLI@2
-   displayName: BuildIt!
+   displayName: Build solution
+
 - powershell: |
    Get-ChildItem -Recurse
-  
   displayName: Show me what's here
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
+- powershell: |
+  displayName: Update Version
+   echo $(Build.BuildNumber) > version.txt
+
+- powershell: |
+    git add .
+    git commit -m "Build number $(Build.BuildNumber)"
+    git push git@github.com:
+  displayName: 'Push to Git'
