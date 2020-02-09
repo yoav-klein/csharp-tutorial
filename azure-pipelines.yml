@@ -13,8 +13,8 @@ steps:
 - script: echo Hello, world!
 - script: echo Again, Hello!
   displayName: 'Run a one-line script'
-- task: DotNetCoreCLI@1
-  displayName: BuildIt!
+-  task: DotNetCoreCLI@1
+   displayName: BuildIt!
   
 - script: |
     echo Add other tasks to build, test, and deploy your project.
