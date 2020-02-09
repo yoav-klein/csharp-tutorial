@@ -13,7 +13,7 @@ steps:
 - script: echo Hello, world!
 - script: echo Again, Hello!
   displayName: 'Run a one-line script'
--  task: DotNetCoreCLI@1
+-  task: DotNetCoreCLI@2
    displayName: BuildIt!
   
 - script: dir
