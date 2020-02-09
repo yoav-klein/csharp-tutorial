@@ -19,9 +19,8 @@ steps:
   displayName: Show me what's here
 
 - powershell: |
-  displayName: Update Version
    echo $(Build.BuildNumber) > version.txt
-
+  displayName: Update Version
 - powershell: |
     git add .
     git commit -m "Build number $(Build.BuildNumber)"
