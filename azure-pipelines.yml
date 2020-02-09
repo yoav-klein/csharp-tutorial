@@ -28,5 +28,5 @@ steps:
     git config --global user.name "yoav-klein"
     git add .
     git commit -m "Build number $(Build.BuildNumber)"
-    git push https://625a87a4570f58a6605f2033f1cd0f15ff1c143f@github.com/yoav-klein/csharp-tutorial.git
+    git push https://5b32ce404b014fcda9bba948e8384b995b9f9b0a@github.com/yoav-klein/csharp-tutorial.git
   displayName: 'Push to Git'
